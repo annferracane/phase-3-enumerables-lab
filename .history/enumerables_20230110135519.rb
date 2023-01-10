@@ -34,7 +34,7 @@ end
 def print_spicy_foods(spicy_foods)
   # your code here
   spicy_foods.map do |f|
-    puts f[:name] + " (" + f[:cuisine] + ") | Heat Level: " + "🌶" * f[:heat_level]
+    puts f[:name] + " (" + f[:cuisine] + ") | Heat Level: " + "🌶 " * f[:heat_level]
   end
 end
 
@@ -50,7 +50,7 @@ end
 def sort_by_heat(spicy_foods)
   # your code here
   spicy_foods.sort do |f1, f2|
-    f1[:heat_level] <=> f2[:heat_level]
+    f2[:heat_level] <=> f1[:heat_level]
   end
 end
 
@@ -67,6 +67,9 @@ end
 # the average heat level of all the spicy foods in the array
 def average_heat_level(spicy_foods)
   # your code here
-  heat_levels = spicy_foods.map { |f| f[:heat_level]}
-  heat_levels.sum / heat_levels.size
+  heat_level = []
+
+  spicy_foods.map
 end
+
+puts average_heat_level(spicy_foods)

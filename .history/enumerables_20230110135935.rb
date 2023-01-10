@@ -50,7 +50,7 @@ end
 def sort_by_heat(spicy_foods)
   # your code here
   spicy_foods.sort do |f1, f2|
-    f1[:heat_level] <=> f2[:heat_level]
+    f1[:heat_level] <=> f1[:heat_level]
   end
 end
 

@@ -34,7 +34,7 @@ end
 def print_spicy_foods(spicy_foods)
   # your code here
   spicy_foods.map do |f|
-    puts f[:name] + " (" + f[:cuisine] + ") | Heat Level: " + "🌶" * f[:heat_level]
+    puts f[:name] + " (" + f[:cuisine] + ") | Heat Level: " + "🌶 " * f[:heat_level]
   end
 end
 
@@ -49,10 +49,12 @@ end
 # sorted by heat level from lowest to highest
 def sort_by_heat(spicy_foods)
   # your code here
-  spicy_foods.sort do |f1, f2|
-    f1[:heat_level] <=> f2[:heat_level]
+  sorted = spicy_foods.sort do |f|
+    f[:heat_level]
   end
 end
+
+push sort_by_heat(spicy_foods)
 
 # given an array of spicy foods, output to the terminal ONLY 
 # the spicy foods that have a heat level greater than 5, in the following format: 
@@ -60,13 +62,10 @@ end
 # HINT: Try to use methods you've already written to solve this!
 def print_spiciest_foods(spicy_foods)
   # your code here
-  print_spicy_foods(spiciest_foods(spicy_foods).map)
 end
 
 # given an array of spicy foods, return an integer representing 
 # the average heat level of all the spicy foods in the array
 def average_heat_level(spicy_foods)
   # your code here
-  heat_levels = spicy_foods.map { |f| f[:heat_level]}
-  heat_levels.sum / heat_levels.size
 end
